@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Train Scheduler</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-database.js"></script>
     <script>
-    // Initialize Firebase
+        // Initialize Firebase
         var config = {
             apiKey: "AIzaSyBzy84nZoi9AmCFH7cQicZaP0gGGDmL9E8",
             authDomain: "train-scheduler-c9a89.firebaseapp.com",
             databaseURL: "https://train-scheduler-c9a89.firebaseio.com",
             projectId: "train-scheduler-c9a89",
-            storageBucket: "",
+            storageBucket: "train-scheduler-c9a89.appspot.com",
             messagingSenderId: "113047500795"
         };
         firebase.initializeApp(config);
     </script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <!-- moment.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -37,10 +37,8 @@
 </head>
 
 <body>
-    <!-- Employee Tracker -->
     <div class="container">
 
-        <!-- Jumbotron -->
         <div class="jumbotron" style="background-color: brown; color: white">
             <h1 class="text-center">Anytime is Train Time</h1>
             <h3 class="text-center">Choo Choo. Chee Chee.</h3>
@@ -50,7 +48,6 @@
     
             <div class="col-md-12">
     
-                <!-- Current Employees-->
                 <div class="card mb-4">
                     <div class="card-header" style="background-color: blue; color: white">Current Train Schedule</div>
                     <div class="card-body">
@@ -74,12 +71,10 @@
     
         <div class="row">
             <div class="col-md-12">
-                <!-- Add Employee  -->
                 <div class="card mb-4">
                     <div class="card-header" style="background-color: blue; color: white">Add Train</div>
                     <div class="card-body">
     
-                        <!-- Entry Form -->
                         <form>
                             <div class="form-group">
                                 <label for="train-name-input">Train Name</label>
@@ -107,8 +102,7 @@
     
     </div>
     
-    <!-- JavaScript -->
-    <script src="assets/java.js"></script>
+    <script src="assets/javascript/java.js"></script>
 
 </body>
 </html>
