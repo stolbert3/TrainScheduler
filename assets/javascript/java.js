@@ -9,9 +9,9 @@ var config = {
 
 firebase.initializeApp(config);
   
-  var database = firebase.database();
+var database = firebase.database();
   
-  $("#add-train-btn").on("click", function(event) {
+$("#add-train-btn").on("click", function(event) {
     event.preventDefault();
   
     var trainName = $("#train-name-input").val().trim();
@@ -20,10 +20,10 @@ firebase.initializeApp(config);
     var trainFreq = $("#frequency-input").val().trim();
   
     var newTrain = {
-      name: trainName,
-      destination: trainDest,
-      time: trainTime,
-      frequency: trainFreq
+        name: trainName,
+        destination: trainDest,
+        time: trainTime,
+        frequency: trainFreq
     };
   
     database.ref().push(newTrain);
@@ -39,9 +39,9 @@ firebase.initializeApp(config);
     $("#destination-input").val("");
     $("#time-input").val("");
     $("#frequency-input").val("");
-  });
+});
   
-  database.ref().on("child_added", function(childSnapshot) {
+database.ref().on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
   
     var trainName = childSnapshot.val().name;
@@ -76,12 +76,12 @@ firebase.initializeApp(config);
     console.log(minAway);
   
     var newRow = $("<tr>").append(
-      $("<td>").text(trainName),
-      $("<td>").text(trainDest),
-      $("<td>").text(trainFreq),
-      $("<td>").text(nextArrival),
-      $("<td>").text(minAway)
+        $("<td>").text(trainName),
+        $("<td>").text(trainDest),
+        $("<td>").text(trainFreq),
+        $("<td>").text(nextArrival),
+        $("<td>").text(minAway)
     );
   
     $("#train-table > tbody").append(newRow);
-  });
+});
